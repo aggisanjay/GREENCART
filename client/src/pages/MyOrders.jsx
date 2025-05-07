@@ -54,7 +54,7 @@ const MyOrders = () => {
                     <p>Status: {item.status}</p>
                     <p>Date: {new Date(order.createdAt).toLocaleDateString()}</p>
                 </div>
-                <p className='text-primary text-lg font-medium'>Amount: {currency}{item.product.offerPrice*item.quantity}</p>
+                 <p className='text-primary text-lg font-medium'>Amount: {currency}{item.product?.offerPrice*item.quantity}</p>  
             </div>
         ))}
       </div>))}

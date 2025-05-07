@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useAppContext } from '../context/AppContext'
-import { dummyOrders } from '../assets/assets'
+
 
 const MyOrders = () => {
 
@@ -42,7 +42,7 @@ const MyOrders = () => {
             <div key={index} className={`relative bg-white text-gray-500/70 ${order.items.length!==index+1 && "border-b"} border-gray-300 flex flex-col md:flex-row md:items-center justify-between p-4 py-5 md:gap-16 w-full max-w-4xl`}>
                 <div className='flex items-center mb-4 md:mb-0'>
                     <div className='ng-primary/10 p-4 rounded-lg'>
-                        <img src={item.product.image[0]} alt="" className='w-16 h-16' />
+                        <img src={item.product?.image?.[0]} alt="" className='w-16 h-16' />
                     </div>
                     <div className='ml-4'>
                         <h2 className='text-4xl font-medium text-gray-800'>{item.product.name}</h2>

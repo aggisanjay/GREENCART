@@ -45,8 +45,8 @@ const MyOrders = () => {
                         <img src={item.product?.image?.[0]} alt="" className='w-16 h-16' />
                     </div>
                     <div className='ml-4'>
-                        <h2 className='text-4xl font-medium text-gray-800'>{item.product.name}</h2>
-                        <p>Category: {item.product.category}</p>
+                        <h2 className='text-4xl font-medium text-gray-800'>{item.product?.name}</h2>
+                        <p>Category: {item.product?.category}</p>
                     </div>
                 </div>
                 <div className='flex flex-col justify-center md:ml-8 mb-4 md:mb-0'>

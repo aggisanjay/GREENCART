@@ -4,7 +4,7 @@ import { useAppContext } from "../context/AppContext";
 
 const ProductCard = ({product}) => {
     
-    const {currency,addToCart,removeFromcart,cartItems,navigate}=useAppContext()
+    const {currency,addToCart,removeFromCart,cartItems,navigate}=useAppContext()
     
 
     return product && (
@@ -35,7 +35,7 @@ const ProductCard = ({product}) => {
                             </button>
                         ) : (
                             <div className="flex items-center justify-center gap-2 md:w-20 w-16 h-[34px] bg-primary/25 rounded select-none">
-                                <button onClick={() =>{removeFromcart(product._id)}} className="cursor-pointer text-md px-2 h-full" >
+                                <button onClick={() =>{removeFromCart(product._id)}} className="cursor-pointer text-md px-2 h-full" >
                                     -
                                 </button>
                                 <span className="w-5 text-center">{cartItems[product._id]}</span>

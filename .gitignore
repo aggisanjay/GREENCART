@@ -3,3 +3,4 @@ client/.env
 backend/.env
 echo ".env" >> .gitignore
 git rm --cached backend/.env
+".env" 

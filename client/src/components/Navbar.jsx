@@ -9,10 +9,10 @@ const Navbar = () => {
     const {user,axios,setUser,setShowUserLogin,navigate,setSearchQuery,searchQuery,getCartCount}=useAppContext();
     const logout=async()=>{
         try {
-            const {data}=await axios.get('/api/user/logout')
+            const {data}=await axios.get('/api/user/logout',{ withCredentials: true,})
             if(data.success){
                 toast.success(data.message)
-                localStorage.removeItem("user");
+              
                 setUser(null);
                 navigate('/')
             }else{

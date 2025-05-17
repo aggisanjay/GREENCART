@@ -87,6 +87,7 @@ export const logout=async(req,res)=>{
         httpOnly:true,
         secure:process.env.NODE_ENV==='production', //use secure cookies in production
         sameSite:process.env.NODE_ENV==='production'?'none':'strict',// csrf protection
+        path:'/',
 
       })
       return res.json({success:true,message:'Logged Out'})

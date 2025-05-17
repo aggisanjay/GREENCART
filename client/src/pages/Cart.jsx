@@ -161,7 +161,7 @@ const Cart= () => {
                                 <p  onClick={() => {
     if (!user) {
       toast.error("Please login to add an address");
-      navigate('/login?redirect=/cart');
+      navigate('/login');
     } else {
       navigate('/add-address');
     }
